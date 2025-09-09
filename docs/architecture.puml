@@ -1,0 +1,14 @@
+@startuml
+!theme spacelab
+
+actor User
+User -> OrderController: REST API Request
+OrderController -> OrderService: Service Call
+OrderService -> PaymentServiceClient: Validate Payment Method
+OrderService -> OrderDao: Save/Fetch Order (with API name)
+OrderDao -> OrderRepository: DB Operation
+OrderService <- PaymentServiceClient: Validation Result
+OrderController -> LogUtil: Structured Logging (with response time)
+OrderService -> LogUtil: Structured Logging (with response time)
+OrderDao -> LogUtil: Structured Logging (with response time)
+@enduml
