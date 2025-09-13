@@ -10,6 +10,9 @@ Spring Boot 3 Order Management Application
 - Transaction tracing using MDC (transactionId)
 - H2 in-memory database for persistence
 - API-level and DB-level error handling
+- Enum-based API name propagation for type safety
+- Masking logic for payment method in responses
+- Comprehensive `.gitignore` for build, IDE, and OS files
 
 ## Architecture
 
@@ -43,6 +46,11 @@ mvn spring-boot:run
   - Logs request, response, and response time
   - Returns: 200 OK + Order JSON or 404 if not found
 
+- GET `/products?type={type}`
+  - Fetch products by type
+  - Integrates with inventory and pricing services
+  - Logs request, response, and response time
+
 - Mock Payment Validation
   - POST `/v1/payment/validate` (local mock)
   - Randomly returns true/false for payment method validation
@@ -56,10 +64,23 @@ mvn spring-boot:run
 ## Logging
 
 - All API and DB operations are logged using `LogUtil`
-- Logs include API name, message, server, and response time
+- Logs include API name (enum), message, server, and response time
 - TransactionId is included for tracing
+- Log format: ISO8601 timestamp + JSON object
+- Example:
+  ```
+  2025-09-13T19:05:02.130Z {"transactionId":"tx-0802","api":"GET_ORDER_BY_ID","server":"local-server","message":"Exception in maskPaymentMethod: StringIndexOutOfBoundsException: begin 10, end 3, length 3.","responseTimeMs":1, "customerAccountId" : "test-user-1"}
+  ```
 
 ## Error Handling
 
 - Validation errors, payment failures, and DB errors are handled and logged
 - Error responses include details and are logged with response time
+- Masking logic for payment method will throw and log errors if length < 10
+- All error scenarios are captured in logs and returned in API responses
+
+## Development
+
+- `.gitignore` excludes build output, IDE, OS, and log files
+- Enum `ApiNames` used throughout for type safety
+- See `logs.txt` for sample and error logs
