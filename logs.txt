@@ -1,0 +1,245 @@
+2025-09-13T18:40:01.123Z {"transactionId":"tx-0101","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Received get products request for type: ELECTRONICS","responseTimeMs":10000}
+2025-09-13T18:40:11.123Z {"transactionId":"tx-0101","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Successfully retrieved 5 products","responseTimeMs":10000}
+2025-09-13T18:40:02.123Z {"transactionId":"tx-0102","api":"GET_INVENTORY","server":"local-server","message":"Inventory Service API response time","responseTimeMs":8000}
+2025-09-13T18:40:10.123Z {"transactionId":"tx-0102","api":"GET_INVENTORY","server":"local-server","message":"Fetched inventory for productId=2001, type=ELECTRONICS","responseTimeMs":8000}
+2025-09-13T18:30:01.123Z {"transactionId":"tx-0001","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":12}
+2025-09-13T18:30:01.135Z {"transactionId":"tx-0001","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:30:01.140Z {"transactionId":"tx-0001","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":8}
+2025-09-13T18:30:01.148Z {"transactionId":"tx-0001","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:30:01.160Z {"transactionId":"tx-0001","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1001, customerAccountId: CUST-001","responseTimeMs":10}
+2025-09-13T18:30:02.123Z {"transactionId":"tx-0002","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":7}
+2025-09-13T18:30:02.130Z {"transactionId":"tx-0002","api":"CREATE_ORDER","server":"local-server","message":"Validation failed: customerId is required","responseTimeMs":2}
+2025-09-13T18:30:03.123Z {"transactionId":"tx-0003","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":9}
+2025-09-13T18:30:03.135Z {"transactionId":"tx-0003","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:30:03.140Z {"transactionId":"tx-0003","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":8}
+2025-09-13T18:30:07.140Z {"transactionId":"tx-0003","api":"CREATE_ORDER","server":"local-server","message":"Payment validation failed: Payment API connectivity error","responseTimeMs":4000}
+2025-09-13T18:30:04.123Z {"transactionId":"tx-0004","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:30:04.135Z {"transactionId":"tx-0004","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:30:04.140Z {"transactionId":"tx-0004","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":8}
+2025-09-13T18:30:04.148Z {"transactionId":"tx-0004","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:30:09.148Z {"transactionId":"tx-0004","api":"CREATE_ORDER","server":"local-server","message":"Order creation failed: DB connectivity error","responseTimeMs":5000}
+2025-09-13T18:30:05.123Z {"transactionId":"tx-0005","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:30:05.135Z {"transactionId":"tx-0005","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:30:05.140Z {"transactionId":"tx-0005","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":4000}
+2025-09-13T18:30:10.140Z {"transactionId":"tx-0005","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:30:15.140Z {"transactionId":"tx-0005","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1005, customerAccountId: CUST-005","responseTimeMs":5000}
+2025-09-13T18:30:06.123Z {"transactionId":"tx-0006","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Received get products request for type: ELECTRONICS","responseTimeMs":5}
+2025-09-13T18:30:06.128Z {"transactionId":"tx-0006","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Successfully retrieved 5 products","responseTimeMs":10}
+2025-09-13T18:30:07.123Z {"transactionId":"tx-0007","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Received get products request for type: ELECTRONICS","responseTimeMs":5}
+2025-09-13T18:30:11.123Z {"transactionId":"tx-0007","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Error retrieving products: Inventory service unavailable","responseTimeMs":4000}
+2025-09-13T18:31:01.123Z {"transactionId":"tx-0099","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:31:01.133Z {"transactionId":"tx-0099","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:31:05.133Z {"transactionId":"tx-0099","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":4000}
+2025-09-13T18:31:10.133Z {"transactionId":"tx-0099","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:31:15.133Z {"transactionId":"tx-0099","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1099, customerAccountId: CUST-099","responseTimeMs":5000}
+2025-09-13T18:47:01.123Z {"transactionId":"tx-0301","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:47:01.133Z {"transactionId":"tx-0301","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:47:01.140Z {"transactionId":"tx-0301","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":8}
+2025-09-13T18:47:01.148Z {"transactionId":"tx-0301","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:47:01.160Z {"transactionId":"tx-0301","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1301, customerAccountId: CUST-301","responseTimeMs":10}
+2025-09-13T18:47:02.123Z {"transactionId":"tx-0302","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":7}
+2025-09-13T18:47:02.130Z {"transactionId":"tx-0302","api":"CREATE_ORDER","server":"local-server","message":"Validation failed: customerId is required","responseTimeMs":2}
+2025-09-13T18:47:03.123Z {"transactionId":"tx-0303","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":9}
+2025-09-13T18:47:03.135Z {"transactionId":"tx-0303","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:47:03.140Z {"transactionId":"tx-0303","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":8}
+2025-09-13T18:47:07.140Z {"transactionId":"tx-0303","api":"CREATE_ORDER","server":"local-server","message":"Payment validation failed: Payment API connectivity error","responseTimeMs":4000}
+2025-09-13T18:47:04.123Z {"transactionId":"tx-0304","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:47:04.135Z {"transactionId":"tx-0304","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:47:04.140Z {"transactionId":"tx-0304","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":8}
+2025-09-13T18:47:04.148Z {"transactionId":"tx-0304","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:47:09.148Z {"transactionId":"tx-0304","api":"CREATE_ORDER","server":"local-server","message":"Order creation failed: DB connectivity error","responseTimeMs":5000}
+2025-09-13T18:47:05.123Z {"transactionId":"tx-0305","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:47:05.135Z {"transactionId":"tx-0305","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:47:05.140Z {"transactionId":"tx-0305","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":4000}
+2025-09-13T18:47:10.140Z {"transactionId":"tx-0305","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:47:15.140Z {"transactionId":"tx-0305","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1305, customerAccountId: CUST-305","responseTimeMs":5000}
+2025-09-13T18:47:06.123Z {"transactionId":"tx-0306","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Received get products request for type: ELECTRONICS","responseTimeMs":5}
+2025-09-13T18:47:06.128Z {"transactionId":"tx-0306","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Successfully retrieved 5 products","responseTimeMs":10}
+2025-09-13T18:47:07.123Z {"transactionId":"tx-0307","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Received get products request for type: ELECTRONICS","responseTimeMs":5}
+2025-09-13T18:47:11.123Z {"transactionId":"tx-0307","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Error retrieving products: Inventory service unavailable","responseTimeMs":4000}
+2025-09-13T18:48:01.123Z {"transactionId":"tx-0399","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:48:01.133Z {"transactionId":"tx-0399","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:48:05.133Z {"transactionId":"tx-0399","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":4000}
+2025-09-13T18:48:10.133Z {"transactionId":"tx-0399","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:48:15.133Z {"transactionId":"tx-0399","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1399, customerAccountId: CUST-399","responseTimeMs":5000}
+2025-09-13T18:49:01.123Z {"transactionId":"tx-0401","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":11}
+2025-09-13T18:49:01.134Z {"transactionId":"tx-0401","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":2}
+2025-09-13T18:49:01.140Z {"transactionId":"tx-0401","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":9}
+2025-09-13T18:49:01.149Z {"transactionId":"tx-0401","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":3}
+2025-09-13T18:49:01.160Z {"transactionId":"tx-0401","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1401, customerAccountId: CUST-401","responseTimeMs":10}
+2025-09-13T18:49:02.123Z {"transactionId":"tx-0402","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":8}
+2025-09-13T18:49:02.130Z {"transactionId":"tx-0402","api":"CREATE_ORDER","server":"local-server","message":"Validation failed: customerId is required","responseTimeMs":2}
+2025-09-13T18:49:03.123Z {"transactionId":"tx-0403","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:49:03.135Z {"transactionId":"tx-0403","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:49:03.140Z {"transactionId":"tx-0403","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":8}
+2025-09-13T18:49:07.140Z {"transactionId":"tx-0403","api":"CREATE_ORDER","server":"local-server","message":"Payment validation failed: Payment API connectivity error","responseTimeMs":4000}
+2025-09-13T18:49:04.123Z {"transactionId":"tx-0404","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:49:04.135Z {"transactionId":"tx-0404","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:49:04.140Z {"transactionId":"tx-0404","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":8}
+2025-09-13T18:49:04.148Z {"transactionId":"tx-0404","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:49:09.148Z {"transactionId":"tx-0404","api":"CREATE_ORDER","server":"local-server","message":"Order creation failed: DB connectivity error","responseTimeMs":5000}
+2025-09-13T18:49:05.123Z {"transactionId":"tx-0405","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:49:05.135Z {"transactionId":"tx-0405","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:49:05.140Z {"transactionId":"tx-0405","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":4000}
+2025-09-13T18:49:10.140Z {"transactionId":"tx-0405","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:49:15.140Z {"transactionId":"tx-0405","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1405, customerAccountId: CUST-405","responseTimeMs":5000}
+2025-09-13T18:49:06.123Z {"transactionId":"tx-0406","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Received get products request for type: ELECTRONICS","responseTimeMs":5}
+2025-09-13T18:49:06.128Z {"transactionId":"tx-0406","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Successfully retrieved 5 products","responseTimeMs":10}
+2025-09-13T18:49:07.123Z {"transactionId":"tx-0407","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Received get products request for type: ELECTRONICS","responseTimeMs":5}
+2025-09-13T18:49:11.123Z {"transactionId":"tx-0407","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Error retrieving products: Inventory service unavailable","responseTimeMs":4000}
+2025-09-13T18:50:01.123Z {"transactionId":"tx-0499","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:50:01.133Z {"transactionId":"tx-0499","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:50:05.133Z {"transactionId":"tx-0499","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":4000}
+2025-09-13T18:50:10.133Z {"transactionId":"tx-0499","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:50:15.133Z {"transactionId":"tx-0499","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1499, customerAccountId: CUST-499","responseTimeMs":5000}
+2025-09-13T18:51:01.123Z {"transactionId":"tx-0501","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":12}
+2025-09-13T18:51:01.134Z {"transactionId":"tx-0501","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":2}
+2025-09-13T18:51:01.140Z {"transactionId":"tx-0501","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":9}
+2025-09-13T18:51:01.149Z {"transactionId":"tx-0501","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":3}
+2025-09-13T18:51:01.160Z {"transactionId":"tx-0501","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1501, customerAccountId: CUST-501","responseTimeMs":10}
+2025-09-13T18:51:02.123Z {"transactionId":"tx-0502","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":8}
+2025-09-13T18:51:02.130Z {"transactionId":"tx-0502","api":"CREATE_ORDER","server":"local-server","message":"Validation failed: customerId is required","responseTimeMs":2}
+2025-09-13T18:51:03.123Z {"transactionId":"tx-0503","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:51:03.135Z {"transactionId":"tx-0503","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:51:03.140Z {"transactionId":"tx-0503","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":8}
+2025-09-13T18:51:07.140Z {"transactionId":"tx-0503","api":"CREATE_ORDER","server":"local-server","message":"Payment validation failed: Payment API connectivity error","responseTimeMs":4000}
+2025-09-13T18:51:04.123Z {"transactionId":"tx-0504","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:51:04.135Z {"transactionId":"tx-0504","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:51:04.140Z {"transactionId":"tx-0504","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":8}
+2025-09-13T18:51:04.148Z {"transactionId":"tx-0504","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:51:09.148Z {"transactionId":"tx-0504","api":"CREATE_ORDER","server":"local-server","message":"Order creation failed: DB connectivity error","responseTimeMs":5000}
+2025-09-13T18:51:05.123Z {"transactionId":"tx-0505","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:51:05.135Z {"transactionId":"tx-0505","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:51:05.140Z {"transactionId":"tx-0505","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":4000}
+2025-09-13T18:51:10.140Z {"transactionId":"tx-0505","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:51:15.140Z {"transactionId":"tx-0505","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1505, customerAccountId: CUST-505","responseTimeMs":5000}
+2025-09-13T18:51:06.123Z {"transactionId":"tx-0506","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Received get products request for type: ELECTRONICS","responseTimeMs":5}
+2025-09-13T18:51:06.128Z {"transactionId":"tx-0506","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Successfully retrieved 5 products","responseTimeMs":10}
+2025-09-13T18:51:07.123Z {"transactionId":"tx-0507","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Received get products request for type: ELECTRONICS","responseTimeMs":5}
+2025-09-13T18:51:11.123Z {"transactionId":"tx-0507","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Error retrieving products: Inventory service unavailable","responseTimeMs":4000}
+2025-09-13T18:52:01.123Z {"transactionId":"tx-0599","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:52:01.133Z {"transactionId":"tx-0599","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:52:05.133Z {"transactionId":"tx-0599","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":4000}
+2025-09-13T18:52:10.133Z {"transactionId":"tx-0599","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:52:15.133Z {"transactionId":"tx-0599","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1599, customerAccountId: CUST-599","responseTimeMs":5000}
+2025-09-13T18:53:01.123Z {"transactionId":"tx-0601","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":12}
+2025-09-13T18:53:01.134Z {"transactionId":"tx-0601","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":2}
+2025-09-13T18:53:01.140Z {"transactionId":"tx-0601","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":9}
+2025-09-13T18:53:01.149Z {"transactionId":"tx-0601","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":3}
+2025-09-13T18:53:01.160Z {"transactionId":"tx-0601","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1601, customerAccountId: CUST-601","responseTimeMs":10}
+2025-09-13T18:53:02.123Z {"transactionId":"tx-0602","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":8}
+2025-09-13T18:53:02.130Z {"transactionId":"tx-0602","api":"CREATE_ORDER","server":"local-server","message":"Validation failed: customerId is required","responseTimeMs":2}
+2025-09-13T18:53:03.123Z {"transactionId":"tx-0603","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:53:03.135Z {"transactionId":"tx-0603","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:53:03.140Z {"transactionId":"tx-0603","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":8}
+2025-09-13T18:53:07.140Z {"transactionId":"tx-0603","api":"CREATE_ORDER","server":"local-server","message":"Payment validation failed: Payment API connectivity error","responseTimeMs":4000}
+2025-09-13T18:53:04.123Z {"transactionId":"tx-0604","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:53:04.135Z {"transactionId":"tx-0604","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:53:04.140Z {"transactionId":"tx-0604","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":8}
+2025-09-13T18:53:04.148Z {"transactionId":"tx-0604","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:53:09.148Z {"transactionId":"tx-0604","api":"CREATE_ORDER","server":"local-server","message":"Order creation failed: DB connectivity error","responseTimeMs":5000}
+2025-09-13T18:53:05.123Z {"transactionId":"tx-0605","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:53:05.135Z {"transactionId":"tx-0605","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:53:05.140Z {"transactionId":"tx-0605","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":4000}
+2025-09-13T18:53:10.140Z {"transactionId":"tx-0605","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:53:15.140Z {"transactionId":"tx-0605","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1605, customerAccountId: CUST-605","responseTimeMs":5000}
+2025-09-13T18:53:06.123Z {"transactionId":"tx-0606","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Received get products request for type: ELECTRONICS","responseTimeMs":5}
+2025-09-13T18:53:06.128Z {"transactionId":"tx-0606","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Successfully retrieved 5 products","responseTimeMs":10}
+2025-09-13T18:53:07.123Z {"transactionId":"tx-0607","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Received get products request for type: ELECTRONICS","responseTimeMs":5}
+2025-09-13T18:53:11.123Z {"transactionId":"tx-0607","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Error retrieving products: Inventory service unavailable","responseTimeMs":4000}
+2025-09-13T18:54:01.123Z {"transactionId":"tx-0699","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:54:01.133Z {"transactionId":"tx-0699","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:54:05.133Z {"transactionId":"tx-0699","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":4000}
+2025-09-13T18:54:10.133Z {"transactionId":"tx-0699","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:54:15.133Z {"transactionId":"tx-0699","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1699, customerAccountId: CUST-699","responseTimeMs":5000}
+2025-09-13T18:55:01.123Z {"transactionId":"tx-0701","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":11}
+2025-09-13T18:55:01.134Z {"transactionId":"tx-0701","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":2}
+2025-09-13T18:55:01.140Z {"transactionId":"tx-0701","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":9}
+2025-09-13T18:55:01.149Z {"transactionId":"tx-0701","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":3}
+2025-09-13T18:55:01.160Z {"transactionId":"tx-0701","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1701, customerAccountId: CUST-701","responseTimeMs":10}
+2025-09-13T18:55:02.123Z {"transactionId":"tx-0702","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":8}
+2025-09-13T18:55:02.130Z {"transactionId":"tx-0702","api":"CREATE_ORDER","server":"local-server","message":"Validation failed: customerId is required","responseTimeMs":2}
+2025-09-13T18:55:03.123Z {"transactionId":"tx-0703","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:55:03.135Z {"transactionId":"tx-0703","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:55:03.140Z {"transactionId":"tx-0703","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":8}
+2025-09-13T18:55:07.140Z {"transactionId":"tx-0703","api":"CREATE_ORDER","server":"local-server","message":"Payment validation failed: Payment API connectivity error","responseTimeMs":4000}
+2025-09-13T18:55:04.123Z {"transactionId":"tx-0704","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:55:04.135Z {"transactionId":"tx-0704","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:55:04.140Z {"transactionId":"tx-0704","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":8}
+2025-09-13T18:55:04.148Z {"transactionId":"tx-0704","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:55:09.148Z {"transactionId":"tx-0704","api":"CREATE_ORDER","server":"local-server","message":"Order creation failed: DB connectivity error","responseTimeMs":5000}
+2025-09-13T18:55:05.123Z {"transactionId":"tx-0705","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:55:05.135Z {"transactionId":"tx-0705","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:55:05.140Z {"transactionId":"tx-0705","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":4000}
+2025-09-13T18:55:10.140Z {"transactionId":"tx-0705","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:55:15.140Z {"transactionId":"tx-0705","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1705, customerAccountId: CUST-705","responseTimeMs":5000}
+2025-09-13T18:55:06.123Z {"transactionId":"tx-0706","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Received get products request for type: ELECTRONICS","responseTimeMs":5}
+2025-09-13T18:55:06.128Z {"transactionId":"tx-0706","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Successfully retrieved 5 products","responseTimeMs":10}
+2025-09-13T18:55:07.123Z {"transactionId":"tx-0707","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Received get products request for type: ELECTRONICS","responseTimeMs":5}
+2025-09-13T18:55:11.123Z {"transactionId":"tx-0707","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Error retrieving products: Inventory service unavailable","responseTimeMs":4000}
+2025-09-13T18:56:01.123Z {"transactionId":"tx-0799","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:56:01.133Z {"transactionId":"tx-0799","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:56:05.133Z {"transactionId":"tx-0799","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":4000}
+2025-09-13T18:56:10.133Z {"transactionId":"tx-0799","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:56:15.133Z {"transactionId":"tx-0799","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1799, customerAccountId: CUST-799","responseTimeMs":5000}
+2025-09-13T18:57:01.123Z {"transactionId":"tx-0801","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":11}
+2025-09-13T18:57:01.134Z {"transactionId":"tx-0801","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":2}
+2025-09-13T18:57:01.140Z {"transactionId":"tx-0801","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":9}
+2025-09-13T18:57:01.149Z {"transactionId":"tx-0801","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":3}
+2025-09-13T18:57:01.160Z {"transactionId":"tx-0801","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1801, customerAccountId: CUST-801","responseTimeMs":10}
+2025-09-13T18:57:02.123Z {"transactionId":"tx-0802","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":8}
+2025-09-13T18:57:02.130Z {"transactionId":"tx-0802","api":"CREATE_ORDER","server":"local-server","message":"Validation failed: customerId is required","responseTimeMs":2}
+2025-09-13T18:57:03.123Z {"transactionId":"tx-0803","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:57:03.135Z {"transactionId":"tx-0803","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:57:03.140Z {"transactionId":"tx-0803","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":8}
+2025-09-13T18:57:07.140Z {"transactionId":"tx-0803","api":"CREATE_ORDER","server":"local-server","message":"Payment validation failed: Payment API connectivity error","responseTimeMs":4000}
+2025-09-13T18:57:04.123Z {"transactionId":"tx-0804","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:57:04.135Z {"transactionId":"tx-0804","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:57:04.140Z {"transactionId":"tx-0804","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":8}
+2025-09-13T18:57:04.148Z {"transactionId":"tx-0804","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:57:09.148Z {"transactionId":"tx-0804","api":"CREATE_ORDER","server":"local-server","message":"Order creation failed: DB connectivity error","responseTimeMs":5000}
+2025-09-13T18:57:05.123Z {"transactionId":"tx-0805","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:57:05.135Z {"transactionId":"tx-0805","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:57:05.140Z {"transactionId":"tx-0805","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":4000}
+2025-09-13T18:57:10.140Z {"transactionId":"tx-0805","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:57:15.140Z {"transactionId":"tx-0805","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1805, customerAccountId: CUST-805","responseTimeMs":5000}
+2025-09-13T18:57:06.123Z {"transactionId":"tx-0806","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Received get products request for type: ELECTRONICS","responseTimeMs":5}
+2025-09-13T18:57:06.128Z {"transactionId":"tx-0806","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Successfully retrieved 5 products","responseTimeMs":10}
+2025-09-13T18:57:07.123Z {"transactionId":"tx-0807","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Received get products request for type: ELECTRONICS","responseTimeMs":5}
+2025-09-13T18:57:11.123Z {"transactionId":"tx-0807","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Error retrieving products: Inventory service unavailable","responseTimeMs":4000}
+2025-09-13T18:58:01.123Z {"transactionId":"tx-0899","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:58:01.133Z {"transactionId":"tx-0899","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:58:05.133Z {"transactionId":"tx-0899","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":4000}
+2025-09-13T18:58:10.133Z {"transactionId":"tx-0899","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:58:15.133Z {"transactionId":"tx-0899","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1899, customerAccountId: CUST-899","responseTimeMs":5000}
+2025-09-13T18:59:01.123Z {"transactionId":"tx-0901","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":11}
+2025-09-13T18:59:01.134Z {"transactionId":"tx-0901","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":2}
+2025-09-13T18:59:01.140Z {"transactionId":"tx-0901","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":9}
+2025-09-13T18:59:01.149Z {"transactionId":"tx-0901","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":3}
+2025-09-13T18:59:01.160Z {"transactionId":"tx-0901","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1901, customerAccountId: CUST-901","responseTimeMs":10}
+2025-09-13T18:59:02.123Z {"transactionId":"tx-0902","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":8}
+2025-09-13T18:59:02.130Z {"transactionId":"tx-0902","api":"CREATE_ORDER","server":"local-server","message":"Validation failed: customerId is required","responseTimeMs":2}
+2025-09-13T18:59:03.123Z {"transactionId":"tx-0903","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:59:03.135Z {"transactionId":"tx-0903","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:59:03.140Z {"transactionId":"tx-0903","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":8}
+2025-09-13T18:59:07.140Z {"transactionId":"tx-0903","api":"CREATE_ORDER","server":"local-server","message":"Payment validation failed: Payment API connectivity error","responseTimeMs":4000}
+2025-09-13T18:59:04.123Z {"transactionId":"tx-0904","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:59:04.135Z {"transactionId":"tx-0904","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:59:04.140Z {"transactionId":"tx-0904","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":8}
+2025-09-13T18:59:04.148Z {"transactionId":"tx-0904","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:59:09.148Z {"transactionId":"tx-0904","api":"CREATE_ORDER","server":"local-server","message":"Order creation failed: DB connectivity error","responseTimeMs":5000}
+2025-09-13T18:59:05.123Z {"transactionId":"tx-0905","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T18:59:05.135Z {"transactionId":"tx-0905","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T18:59:05.140Z {"transactionId":"tx-0905","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":4000}
+2025-09-13T18:59:10.140Z {"transactionId":"tx-0905","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T18:59:15.140Z {"transactionId":"tx-0905","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1905, customerAccountId: CUST-905","responseTimeMs":5000}
+2025-09-13T18:59:06.123Z {"transactionId":"tx-0906","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Received get products request for type: ELECTRONICS","responseTimeMs":5}
+2025-09-13T18:59:06.128Z {"transactionId":"tx-0906","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Successfully retrieved 5 products","responseTimeMs":10}
+2025-09-13T18:59:07.123Z {"transactionId":"tx-0907","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Received get products request for type: ELECTRONICS","responseTimeMs":5}
+2025-09-13T18:59:11.123Z {"transactionId":"tx-0907","api":"GET_PRODUCTS_BY_TYPE","server":"local-server","message":"Error retrieving products: Inventory service unavailable","responseTimeMs":4000}
+2025-09-13T19:00:01.123Z {"transactionId":"tx-0999","api":"CREATE_ORDER","server":"local-server","message":"Received create order request","responseTimeMs":10}
+2025-09-13T19:00:01.133Z {"transactionId":"tx-0999","api":"CREATE_ORDER","server":"local-server","message":"Validated order request","responseTimeMs":3}
+2025-09-13T19:00:05.133Z {"transactionId":"tx-0999","api":"CREATE_ORDER","server":"local-server","message":"Validating payment method: VISA","responseTimeMs":4000}
+2025-09-13T19:00:10.133Z {"transactionId":"tx-0999","api":"CREATE_ORDER","server":"local-server","message":"Payment method valid","responseTimeMs":4}
+2025-09-13T19:00:15.133Z {"transactionId":"tx-0999","api":"CREATE_ORDER","server":"local-server","message":"Order created with id: 1999, customerAccountId: CUST-999","responseTimeMs":5000}
+2025-09-13T19:05:02.130Z {"transactionId":"tx-0802","api":"GET_ORDER_BY_ID","server":"local-server","message":"Exception in maskPaymentMethod: StringIndexOutOfBoundsException: begin 10, end 3 paymentMethod: UPI, length 3.","responseTimeMs":1, "customerAccountId" : "test-user-1"}

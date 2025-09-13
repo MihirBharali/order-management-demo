@@ -12,13 +12,16 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
+import com.order.ordermanagement.util.ApiNames;
+import com.order.ordermanagement.util.LogUtil;
+
 @Component
 public class PaymentServiceClient {
     private static final Logger logger = LogManager.getLogger(PaymentServiceClient.class);
     private final RestTemplate restTemplate = new RestTemplate();
     private static final String PAYMENT_VALIDATE_URL = "http://localhost:8080/v1/payment/validate";
 
-    public boolean isPaymentMethodValid(String paymentMethod) {
+    public boolean isPaymentMethodValid(String paymentMethod, ApiNames apiName, String customerAccountId) {
         long start = System.currentTimeMillis();
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -28,11 +31,11 @@ public class PaymentServiceClient {
         try {
             ResponseEntity<Boolean> response = restTemplate.postForEntity(PAYMENT_VALIDATE_URL, entity, Boolean.class);
             long duration = System.currentTimeMillis() - start;
-            logger.info("Payment validation API response time: {} ms", duration);
+            LogUtil.info("Payment validation API response time: " + duration + " ms", apiName.name(), duration, customerAccountId);
             return Boolean.TRUE.equals(response.getBody());
         } catch (Exception e) {
             long duration = System.currentTimeMillis() - start;
-            logger.error("Error calling payment validation API ({} ms)", duration, e);
+            LogUtil.error("Error calling payment validation API (" + duration + " ms)", apiName.name(), duration, customerAccountId);
             return false;
         }
     }

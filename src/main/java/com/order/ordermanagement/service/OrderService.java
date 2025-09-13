@@ -12,6 +12,7 @@ import com.order.ordermanagement.dao.OrderDao;
 import com.order.ordermanagement.domain.Order;
 import com.order.ordermanagement.dto.CreateOrderRequest;
 import com.order.ordermanagement.dto.OrderResponse;
+import com.order.ordermanagement.util.ApiNames;
 
 @Service
 public class OrderService {
@@ -26,14 +27,14 @@ public class OrderService {
     this.paymentServiceClient = paymentServiceClient;
   }
 
-  public OrderResponse createOrder(CreateOrderRequest request) {
+  public OrderResponse createOrder(CreateOrderRequest request, String customerAccountId) {
     logger.info("Creating new order for customerId: {}", request.getCustomerId());
     validateRequest(request);
     logger.debug("Validated order request: {}", request);
 
     // Validate payment method via external API
-    if (!paymentServiceClient.isPaymentMethodValid(request.getPaymentMethod())) {
-      logger.error("Payment method validation failed for: {}", request.getPaymentMethod());
+  if (!paymentServiceClient.isPaymentMethodValid(request.getPaymentMethod(), ApiNames.CREATE_ORDER, customerAccountId)) {
+      logger.error("Payment method validation failed for: {} ,customerAccountId: {}", request.getPaymentMethod(), customerAccountId);
       throw new ValidationException("Invalid payment method");
     }
 
@@ -49,16 +50,16 @@ public class OrderService {
     order.setStatus("PENDING");
     order.setCreatedAt(OffsetDateTime.now());
 
-    Order saved = orderDao.save(order);
-    logger.info("Order created with id: {}", saved.getId());
+  Order saved = orderDao.save(order, ApiNames.CREATE_ORDER, customerAccountId);
+    logger.info("Order created with id: {}, customerAccountId: {}", saved.getId(), customerAccountId);
     return toResponse(saved);
   }
 
   // Payment validation logic moved to PaymentServiceClient
 
-  public OrderResponse getOrder(Long id) {
+  public OrderResponse getOrder(Long id, String customerAccountId) {
     logger.info("Fetching order with id: {}", id);
-  Order order = orderDao.findByIdOrThrow(id);
+  Order order = orderDao.findByIdOrThrow(id, ApiNames.GET_ORDER_BY_ID, customerAccountId);
     logger.debug("Order found: {}", order);
     return toResponse(order);
   }
@@ -119,7 +120,7 @@ public class OrderService {
 
   private String maskPaymentMethod(String paymentMethod) {
     if (paymentMethod == null) return null;
-    int maskLength = Math.min(10, paymentMethod.length());
+    int maskLength = 10;
     StringBuilder masked = new StringBuilder();
     for (int i = 0; i < maskLength; i++) {
       masked.append('*');

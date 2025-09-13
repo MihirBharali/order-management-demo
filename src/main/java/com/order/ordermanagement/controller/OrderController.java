@@ -1,5 +1,3 @@
-
-
 package com.order.ordermanagement.controller;
 
 import java.util.UUID;
@@ -25,7 +23,7 @@ import com.order.ordermanagement.util.LogUtil;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/orders")
+@RequestMapping("/orders/{customerAccountId}")
 public class OrderController {
 
   private final OrderService orderService;
@@ -35,53 +33,35 @@ public class OrderController {
   }
 
   @PostMapping
-  public ResponseEntity<OrderResponse> create(@Valid @RequestBody CreateOrderRequest request) {
+  public ResponseEntity<OrderResponse> create(@PathVariable String customerAccountId, @Valid @RequestBody CreateOrderRequest request) {
     String transactionId = UUID.randomUUID().toString();
     ThreadContext.put("transactionId", transactionId);
-    long start = System.currentTimeMillis();
-    LogUtil.info("Received create order request", ApiNames.CREATE_ORDER);
-    try {
-      OrderResponse response = orderService.createOrder(request);
-      long duration = System.currentTimeMillis() - start;
-      LogUtil.info("Order created successfully: " + response, ApiNames.CREATE_ORDER, duration);
-      ThreadContext.clearAll();
-      return ResponseEntity.status(HttpStatus.CREATED).body(response);
-    } catch (Exception ex) {
-      long duration = System.currentTimeMillis() - start;
-      LogUtil.error("Order creation failed: " + ex.getMessage(), ApiNames.CREATE_ORDER, duration);
-      ThreadContext.clearAll();
-      return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
-    }
+  LogUtil.info("Received create order request", ApiNames.CREATE_ORDER.name(), customerAccountId);
+    OrderResponse response = orderService.createOrder(request, customerAccountId);
+  LogUtil.info("Order created successfully", ApiNames.CREATE_ORDER.name(), customerAccountId);
+    ThreadContext.clearAll();
+    return ResponseEntity.status(HttpStatus.CREATED).body(response);
   }
 
   @GetMapping("/{id}")
-  public ResponseEntity<OrderResponse> getById(@PathVariable Long id) {
+  public ResponseEntity<OrderResponse> getById(@PathVariable String customerAccountId, @PathVariable Long id) {
     String transactionId = UUID.randomUUID().toString();
     ThreadContext.put("transactionId", transactionId);
-    long start = System.currentTimeMillis();
-    LogUtil.info("Received get order by id request", ApiNames.GET_ORDER_BY_ID);
-    try {
-      OrderResponse response = orderService.getOrder(id);
-      long duration = System.currentTimeMillis() - start;
-      LogUtil.info("Order fetched successfully: " + response, ApiNames.GET_ORDER_BY_ID, duration);
-      ThreadContext.clearAll();
-      return ResponseEntity.ok(response);
-    } catch (Exception ex) {
-      long duration = System.currentTimeMillis() - start;
-      LogUtil.error("Order fetch failed: " + ex.getMessage(), ApiNames.GET_ORDER_BY_ID, duration);
-      ThreadContext.clearAll();
-      return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
-    }
+  LogUtil.info("Received get order by id request", ApiNames.GET_ORDER_BY_ID.name(), customerAccountId);
+    OrderResponse response = orderService.getOrder(id, customerAccountId);
+  LogUtil.info("Order fetched successfully", ApiNames.GET_ORDER_BY_ID.name(), customerAccountId);
+    ThreadContext.clearAll();
+    return ResponseEntity.ok(response);
   }
 
   @ExceptionHandler(OrderNotFoundException.class)
-  public ResponseEntity<String> handleNotFound(OrderNotFoundException ex) {
+  public ResponseEntity<String> handleNotFound(OrderNotFoundException ex, @PathVariable Long customerAccountId) {
     String transactionId = UUID.randomUUID().toString();
     ThreadContext.put("transactionId", transactionId);
     long start = System.currentTimeMillis();
-    LogUtil.error("Order not found: " + ex.getMessage(), ApiNames.GET_ORDER_BY_ID);
+  LogUtil.error("Order not found: " + ex.getMessage(), ApiNames.GET_ORDER_BY_ID.name(), customerAccountId.toString());
     long duration = System.currentTimeMillis() - start;
-    LogUtil.error("Order not found response: " + ex.getMessage(), ApiNames.GET_ORDER_BY_ID, duration);
+  LogUtil.error("Order not found response: " + ex.getMessage(), ApiNames.GET_ORDER_BY_ID.name(), duration, customerAccountId.toString());
     ThreadContext.clearAll();
     return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
   }
